@@ -7,6 +7,12 @@ const __filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(__filename)
 
 const nextConfig: NextConfig = {
+  // Imagen mínima para el Dockerfile (Coolify)
+  output: 'standalone',
+  // El CMS no tiene sitio público: la raíz lleva al panel
+  async redirects() {
+    return [{ source: '/', destination: '/admin', permanent: false }]
+  },
   images: {
     localPatterns: [
       {
