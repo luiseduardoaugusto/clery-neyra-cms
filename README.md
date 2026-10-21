@@ -37,6 +37,8 @@ Las migraciones nuevas se aplican automáticamente al arrancar el contenedor en 
 
 ## Despliegue (Coolify)
 
+Guía paso a paso, incluida la importación del contenido: [docs/despliegue-coolify.md](docs/despliegue-coolify.md).
+
 1. Crear una base de datos **PostgreSQL 17** en el mismo proyecto de Coolify y activar sus respaldos programados.
 2. Crear una aplicación desde este repo con build pack **Dockerfile** y puerto **3000**.
 3. Variables de entorno: `DATABASE_URL` (URL interna de la base), `PAYLOAD_SECRET`, `PAYLOAD_PUBLIC_SERVER_URL` y `NETLIFY_BUILD_HOOK_URL`.
